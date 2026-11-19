@@ -2,19 +2,19 @@
     --bg-color: #f2efe7;
     --text-color: #202923;
     --accent-color: #315d50;
-    --secondary-text: #d8d9cc;
+    --secondary-color: #d8d9cc;
+    --heading-font: Georgia, serif;
+    --body-font: Arial, sans-serif;
 
 }
 
 body { background-color: var(--bg-color);
         color: var(--text-color);
-        font-family: Arial, sans-sarif;
+        font-family: var(--body-font);
         margin: 0;
 
 }
-h1 {
-    color: #60a5fa;
-}
+
 nav h2 {
     font-size: 24px;
     color: var(--accent-color);
@@ -39,15 +39,17 @@ header {
 
 #home {
     text-align: left;
-    padding: 120px 60px;
+    padding: 120px clamp(20px, 5vw, 60px);
     min-height: 400px;
 }
 
 #home h1 {
-    font-size:64px;
+    font-size: clamp(36px, 5vw, 64px);
+    font-family: var(--heading-font);
     line-height: 1.1;
     max-width: 900px;
-    color: var(--text-color); 
+    color: var(--text-color);
+    margin-bottom: 30px; 
 }
 
 #home span {
@@ -64,11 +66,11 @@ header {
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: var(--accent-color)
+    color: var(--accent-color);
 }
 
 .description {
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     color: var(--text-color);
     max-width: 600px;
     line-height: 1.6;
@@ -94,9 +96,87 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+.home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#projects {
+    padding: 100px clamp(20px, 5vw, 60px);
+    background-color: var(--secondary-color);
+}
+.projects-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-#home {
-    text-align: center;
-    padding: 100px 20px;
-    min-height: 400px;
+#projects h2 {
+    font-family: var(--heading-font);
+    font-size: clamp(32px, 4vw, 52px);
+    color: var(var(--text-color));
+    margin-bottom: 20px;
+}
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+}
+
+#projects .projects-content > p:not(.section-label) {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    color: var(--text-color)
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 50px;
+}
+
+.project-image {
+    background-color: var(--accent-color);
+    height: 300px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image p {
+    color: var(--bg-color);
+    font-size: 18px;
+}
+
+.project-category {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin-top: 30px;
+}
+.project-info h3 {
+    font-family: var(--heading-font);
+    font-size: clamp(28px, 3vw, 40px);
+    color: var(--text-color);
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 650px;
+    color: var(--text-color);
+}
+
+.project-tools {
+    font-size: 14px;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-top: 25px;
+
 }
