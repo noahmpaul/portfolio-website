@@ -94,3 +94,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+#home {
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 400px;
+}
